@@ -1,0 +1,108 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 26
+    },
+    "configurePresets": [
+        {
+            "name": "base-x64",
+            "hidden": true,
+            "generator": "Ninja",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}"
+        },
+        {
+            "name": "MSVC-x64",
+            "inherits": "base-x64",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "Intel-x64",
+            "inherits": "base-x64",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "icx",
+                "CMAKE_CXX_COMPILER": "icpx"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "MSVC-x64-Debug",
+            "hidden": false,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "MSVC-x64-Release",
+            "hidden": false,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "Intel-x64-Debug",
+            "hidden": false,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "Intel-x64-Release",
+            "hidden": false,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default-benchmark",
+            "hidden": false,
+            "targets": "benchmark",
+            "jobs": 4
+        },
+        {
+            "name": "MSVC-x64-Debug-benchmark",
+            "inherits": "default",
+            "configurePreset": "MSVC-x64-Debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "MSVC-x64-Release-benchmark",
+            "inherits": "default",
+            "configurePreset": "MSVC-x64-Release",
+            "configuration": "Release"
+        },
+        {
+            "name": "Intel-x64-Debug-benchmark",
+            "inherits": "default",
+            "configurePreset": "Intel-x64-Debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "Intel-x64-Release-benchmark",
+            "inherits": "default",
+            "configurePreset": "Intel-x64-Release",
+            "configuration": "Release"
+        }
+    ]
+}
