@@ -1,26 +1,47 @@
 #include <algorithm>
-#include <functional>
-#include <numeric>
-#include <random>
+#include <execution>
 #include <vector>
 
 #include <benchmark/benchmark.h>
 
-static void BM_reduce(benchmark::State &state)
+static void BM_reduce_seq(benchmark::State &state)
 {
-    std::minstd_rand generator;
-    std::uniform_int_distribution<int> distribution(1, 10);
-    auto dice = std::bind(distribution, generator);
-    std::vector<int> v(state.range(0));
-    std::generate(v.begin(), v.end(), dice);
+    const std::vector<double> v(state.range(0), 0.1);
     for (auto _ : state)
     {
-        auto sum = std::reduce(v.begin(), v.end(), 0);
+        auto sum{std::reduce(v.begin(), v.end())};
         benchmark::DoNotOptimize(sum);
     }
-    state.SetComplexityN(state.range(0));
 }
 
-BENCHMARK(BM_reduce)->RangeMultiplier(2)->Range(1, 1 << 30)->Complexity();
+BENCHMARK(BM_reduce_seq)->RangeMultiplier(2)->Range(1 << 20, 1 << 30)->Unit(benchmark::kMillisecond);
+
+static void BM_reduce_par(benchmark::State &state)
+{
+    const std::vector<double> v(state.range(0), 0.1);
+    for (auto _ : state)
+    {
+        auto sum{std::reduce(std::execution::par, v.begin(), v.end())};
+        benchmark::DoNotOptimize(sum);
+    }
+}
+
+BENCHMARK(BM_reduce_par)->RangeMultiplier(2)->Range(1 << 20, 1 << 30)->Unit(benchmark::kMillisecond)->UseRealTime();
+
+static void BM_reduce_par_unseq(benchmark::State &state)
+{
+    const std::vector<double> v(state.range(0), 0.1);
+    for (auto _ : state)
+    {
+        auto sum{std::reduce(std::execution::par_unseq, v.begin(), v.end())};
+        benchmark::DoNotOptimize(sum);
+    }
+}
+
+BENCHMARK(BM_reduce_par_unseq)
+    ->RangeMultiplier(2)
+    ->Range(1 << 20, 1 << 30)
+    ->Unit(benchmark::kMillisecond)
+    ->UseRealTime();
 
 BENCHMARK_MAIN();

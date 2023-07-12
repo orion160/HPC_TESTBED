@@ -1,0 +1,56 @@
+
+########################################################################
+#      Date:           Fri 07 Jul 2023 12:18:56 PM PDT
+#    Job ID:           2338613.v-qsvr-1.aidevcloud
+#      User:           u196582
+# Resources:           cput=75:00:00,mem=300gb,neednodes=1:spr:ppn=2,nodes=1:spr:ppn=2,walltime=00:10:00
+########################################################################
+
+-----------------------------------------------------------------------------------
+Benchmark                                         Time             CPU   Iterations
+-----------------------------------------------------------------------------------
+BM_reduce_seq/1048576                         0.405 ms        0.405 ms         1283
+BM_reduce_seq/2097152                         0.815 ms        0.815 ms          859
+BM_reduce_seq/4194304                          1.68 ms         1.68 ms          406
+BM_reduce_seq/8388608                          3.14 ms         3.14 ms          216
+BM_reduce_seq/16777216                         7.05 ms         7.05 ms           86
+BM_reduce_seq/33554432                         18.2 ms         18.2 ms           39
+BM_reduce_seq/67108864                         40.0 ms         40.0 ms           17
+BM_reduce_seq/134217728                        83.7 ms         83.7 ms            8
+BM_reduce_seq/268435456                         170 ms          170 ms            4
+BM_reduce_seq/536870912                         343 ms          343 ms            2
+BM_reduce_seq/1073741824                        862 ms          862 ms            1
+BM_reduce_seq/2147483648                       1385 ms         1385 ms            1
+BM_reduce_seq/4294967296                       2773 ms         2773 ms            1
+BM_reduce_par/1048576/real_time               0.173 ms        0.173 ms         4466
+BM_reduce_par/2097152/real_time               0.176 ms        0.176 ms         3556
+BM_reduce_par/4194304/real_time               0.188 ms        0.188 ms         3420
+BM_reduce_par/8388608/real_time               0.189 ms        0.189 ms         3074
+BM_reduce_par/16777216/real_time              0.319 ms        0.319 ms         2123
+BM_reduce_par/33554432/real_time              0.998 ms        0.997 ms          662
+BM_reduce_par/67108864/real_time               2.44 ms         2.44 ms          296
+BM_reduce_par/134217728/real_time              6.93 ms         6.93 ms           89
+BM_reduce_par/268435456/real_time              15.2 ms         15.2 ms           45
+BM_reduce_par/536870912/real_time              32.0 ms         32.0 ms           22
+BM_reduce_par/1073741824/real_time             63.3 ms         63.2 ms           13
+BM_reduce_par/2147483648/real_time              124 ms          124 ms            7
+BM_reduce_par/4294967296/real_time             1090 ms         1089 ms            3
+BM_reduce_par_unseq/1048576/real_time         0.094 ms        0.094 ms         7156
+BM_reduce_par_unseq/2097152/real_time         0.095 ms        0.095 ms         7189
+BM_reduce_par_unseq/4194304/real_time         0.099 ms        0.099 ms         6006
+BM_reduce_par_unseq/8388608/real_time         0.116 ms        0.116 ms         5213
+BM_reduce_par_unseq/16777216/real_time        0.251 ms        0.251 ms         2598
+BM_reduce_par_unseq/33554432/real_time        0.940 ms        0.940 ms          713
+BM_reduce_par_unseq/67108864/real_time         2.44 ms         2.44 ms          263
+BM_reduce_par_unseq/134217728/real_time        6.91 ms         6.90 ms           89
+BM_reduce_par_unseq/268435456/real_time        15.7 ms         15.7 ms           45
+BM_reduce_par_unseq/536870912/real_time        34.4 ms         34.4 ms           18
+BM_reduce_par_unseq/1073741824/real_time        102 ms          101 ms            9
+BM_reduce_par_unseq/2147483648/real_time        988 ms          857 ms            1
+BM_reduce_par_unseq/4294967296/real_time       3000 ms         3000 ms            1
+
+########################################################################
+# End of output for job 2338613.v-qsvr-1.aidevcloud
+# Date: Fri 07 Jul 2023 12:21:31 PM PDT
+########################################################################
+

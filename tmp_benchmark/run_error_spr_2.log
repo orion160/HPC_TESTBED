@@ -1,0 +1,10 @@
+2023-07-07T12:25:42-07:00
+Running ./out/build/Intel-x64-Release/src/benchmark
+Run on (224 X 3800 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x112)
+  L1 Instruction 32 KiB (x112)
+  L2 Unified 2048 KiB (x112)
+  L3 Unified 107520 KiB (x2)
+Load Average: 1.00, 7.98, 7.45
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.

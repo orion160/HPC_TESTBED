@@ -46,6 +46,7 @@
         },
         {
             "name": "MSVC-x64-Debug",
+            "inherits": "MSVC-x64",
             "hidden": false,
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
@@ -53,6 +54,7 @@
         },
         {
             "name": "MSVC-x64-Release",
+            "inherits": "MSVC-x64",
             "hidden": false,
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
@@ -60,6 +62,7 @@
         },
         {
             "name": "Intel-x64-Debug",
+            "inherits": "Intel-x64",
             "hidden": false,
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
@@ -67,6 +70,7 @@
         },
         {
             "name": "Intel-x64-Release",
+            "inherits": "Intel-x64",
             "hidden": false,
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
@@ -76,31 +80,35 @@
     "buildPresets": [
         {
             "name": "default-benchmark",
-            "hidden": false,
+            "hidden": true,
             "targets": "benchmark",
             "jobs": 4
         },
         {
             "name": "MSVC-x64-Debug-benchmark",
-            "inherits": "default",
+            "hidden": false,
+            "inherits": "default-benchmark",
             "configurePreset": "MSVC-x64-Debug",
             "configuration": "Debug"
         },
         {
             "name": "MSVC-x64-Release-benchmark",
-            "inherits": "default",
+            "hidden": false,
+            "inherits": "default-benchmark",
             "configurePreset": "MSVC-x64-Release",
             "configuration": "Release"
         },
         {
             "name": "Intel-x64-Debug-benchmark",
-            "inherits": "default",
+            "hidden": false,
+            "inherits": "default-benchmark",
             "configurePreset": "Intel-x64-Debug",
             "configuration": "Debug"
         },
         {
             "name": "Intel-x64-Release-benchmark",
-            "inherits": "default",
+            "hidden": false,
+            "inherits": "default-benchmark",
             "configurePreset": "Intel-x64-Release",
             "configuration": "Release"
         }

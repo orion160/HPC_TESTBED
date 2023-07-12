@@ -1,0 +1,54 @@
+
+########################################################################
+#      Date:           Fri 07 Jul 2023 12:25:26 PM PDT
+#    Job ID:           2338614.v-qsvr-1.aidevcloud
+#      User:           u196582
+# Resources:           cput=75:00:00,mem=300gb,neednodes=1:spr:ppn=2,nodes=1:spr:ppn=2,walltime=00:10:00
+########################################################################
+
+name,iterations,real_time,cpu_time,time_unit,bytes_per_second,items_per_second,label,error_occurred,error_message
+"BM_reduce_seq/134217728",6,102.649,102.639,ms,,,,,
+"BM_reduce_seq/16777216",67,9.63448,9.63316,ms,,,,,
+"BM_reduce_par_unseq/134217728/real_time",97,7.07734,7.07058,ms,,,,,
+"BM_reduce_par_unseq/2147483648/real_time",4,145.071,144.952,ms,,,,,
+"BM_reduce_par/16777216/real_time",2163,0.319008,0.318381,ms,,,,,
+"BM_reduce_seq/4194304",716,0.977479,0.977242,ms,,,,,
+"BM_reduce_seq/1048576",2867,0.244109,0.244105,ms,,,,,
+"BM_reduce_par_unseq/1073741824/real_time",11,63.9152,63.8709,ms,,,,,
+"BM_reduce_seq/67108864",17,41.6252,41.6197,ms,,,,,
+"BM_reduce_par_unseq/67108864/real_time",259,2.19115,2.17348,ms,,,,,
+"BM_reduce_seq/2147483648",1,1569.24,1569.02,ms,,,,,
+"BM_reduce_par/134217728/real_time",90,6.92509,6.92452,ms,,,,,
+"BM_reduce_par_unseq/4294967296/real_time",3,241.713,241.51,ms,,,,,
+"BM_reduce_par/268435456/real_time",45,16.1223,16.0992,ms,,,,,
+"BM_reduce_par_unseq/268435456/real_time",44,15.4226,15.3927,ms,,,,,
+"BM_reduce_par/4294967296/real_time",2,326.804,326.564,ms,,,,,
+"BM_reduce_par/1048576/real_time",5053,0.143384,0.143252,ms,,,,,
+"BM_reduce_par_unseq/33554432/real_time",661,0.9956,0.991491,ms,,,,,
+"BM_reduce_par_unseq/1048576/real_time",5064,0.143399,0.143373,ms,,,,,
+"BM_reduce_seq/268435456",4,167.995,167.991,ms,,,,,
+"BM_reduce_seq/2097152",1316,0.504147,0.50414,ms,,,,,
+"BM_reduce_par_unseq/16777216/real_time",2179,0.307327,0.307325,ms,,,,,
+"BM_reduce_par/2097152/real_time",4543,0.157402,0.157401,ms,,,,,
+"BM_reduce_par/67108864/real_time",249,2.46254,2.46243,ms,,,,,
+"BM_reduce_par_unseq/536870912/real_time",22,31.3937,31.3914,ms,,,,,
+"BM_reduce_par/1073741824/real_time",13,65.1254,64.9593,ms,,,,,
+"BM_reduce_seq/1073741824",1,771.819,771.798,ms,,,,,
+"BM_reduce_par_unseq/4194304/real_time",3569,0.183149,0.183122,ms,,,,,
+"BM_reduce_par/33554432/real_time",616,1.01515,1.01477,ms,,,,,
+"BM_reduce_par/4194304/real_time",3760,0.17751,0.1775,ms,,,,,
+"BM_reduce_seq/4294967296",1,2800.59,2800.13,ms,,,,,
+"BM_reduce_par/8388608/real_time",3352,0.197593,0.197577,ms,,,,,
+"BM_reduce_par_unseq/2097152/real_time",3826,0.164051,0.164021,ms,,,,,
+"BM_reduce_seq/8388608",312,2.24501,2.24497,ms,,,,,
+"BM_reduce_seq/536870912",2,384.009,383.965,ms,,,,,
+"BM_reduce_par/536870912/real_time",22,32.9459,32.8928,ms,,,,,
+"BM_reduce_par/2147483648/real_time",7,126.124,126.115,ms,,,,,
+"BM_reduce_seq/33554432",33,20.9033,20.8995,ms,,,,,
+"BM_reduce_par_unseq/8388608/real_time",3218,0.199475,0.199471,ms,,,,,
+
+########################################################################
+# End of output for job 2338614.v-qsvr-1.aidevcloud
+# Date: Fri 07 Jul 2023 12:28:26 PM PDT
+########################################################################
+
